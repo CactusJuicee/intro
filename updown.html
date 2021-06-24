@@ -1,0 +1,71 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>Upvote Button</title>
+        </head>
+
+        <body>
+        <span id="userpara"></span>
+        <button id='btn_up' class='up' onclick='up()'>Upvote</button>
+        <button id='btn_down' class='down' onclick='down()'>Downvote</button>
+        <script>
+            let counter = 0
+            document.getElementById("userpara").innerHTML = counter;
+
+            function up() { 
+                counter+=1;
+                document.getElementById("userpara").innerHTML = counter;
+            }
+            function down() {
+                counter-=1;
+                document.getElementById("userpara").innerHTML = counter;
+            }
+            
+        </script>
+
+         <style>
+        .userpara {
+
+            border-radius: 3px;
+            padding-left: 0.25em;
+            padding-right: 0.25em;
+    
+        }
+
+        button {
+            
+
+            border-radius: 3px;
+            padding: 0.25em;
+            color: blue;
+            cursor: pointer;
+            font-family: monospace;
+            
+        }
+
+        button:active {
+            box-shadow: none;
+        }
+
+        button.up {
+            background-color:transparent;
+            width: 10;
+	        height: 10;
+	        border-left: 50px solid transparent;
+	        border-right: 50px solid transparent;
+	        border-bottom: 100px solid rgb(7, 218, 255);
+        }
+
+        button.down {
+            background-color:transparent;
+            width: 10;
+	        height: 10;
+	        border-left: 50px solid transparent;
+	        border-right: 50px solid transparent;
+	        border-top: 100px solid rgb(255, 0, 0);
+       
+        }
+    </style>
+</body>
+
+</html>
